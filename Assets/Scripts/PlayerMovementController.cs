@@ -5,7 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 
 public class PlayerMovementController : MonoBehaviour {
-    [SerializeField] private float walkSpeed;
+    [SerializeField] private float acceleration;
+    [SerializeField] private float maxRunSpeed;
     [SerializeField] private float jumpSpeed;
     private Rigidbody2D rb2D;
     private Vector2 velocity = new Vector2();
@@ -23,16 +24,14 @@ public class PlayerMovementController : MonoBehaviour {
 
     private void SetWalkOnInput() {
         velocity = rb2D.velocity;
-        currentSpeed = 0f;
+        currentSpeed = velocity.x;
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            currentSpeed += walkSpeed;
+        if (Input.GetKey(KeyCode.D) && velocity.x < maxRunSpeed) {
+            currentSpeed += acceleration;
         }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            currentSpeed -= walkSpeed;
+        if (Input.GetKey(KeyCode.A) && velocity.x > -maxRunSpeed) {
+            currentSpeed -= acceleration;
         }
 
         velocity.x = currentSpeed;
@@ -47,5 +46,9 @@ public class PlayerMovementController : MonoBehaviour {
         }
 
         rb2D.velocity = velocity;
+    }
+
+    public void OnGroundedChange(bool onGround) {
+        Debug.Log("On Ground = " + onGround.ToString());
     }
 }

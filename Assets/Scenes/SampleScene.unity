@@ -443,8 +443,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1049184001314679745, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
+      propertyPath: maxSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049184001314679745, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
+      propertyPath: jumpSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049184001314679745, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: walkSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049184001314679745, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
+      propertyPath: acceleration
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461766620044242224, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8433381
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461766620044242224, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15305123
       objectReference: {fileID: 0}
     - target: {fileID: 5461766620044242225, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: m_RootOrder
@@ -452,11 +472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5461766620044242225, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.000000007450581
       objectReference: {fileID: 0}
     - target: {fileID: 5461766620044242225, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.21133335
       objectReference: {fileID: 0}
     - target: {fileID: 5461766620044242225, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: m_LocalPosition.z
