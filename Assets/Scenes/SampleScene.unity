@@ -448,15 +448,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049184001314679745, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: jumpSpeed
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1049184001314679745, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: walkSpeed
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1049184001314679745, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
+      propertyPath: maxRunSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049184001314679745, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: acceleration
-      value: 0.0001
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5461766620044242224, guid: 26542db0e48c7c9408080b7c6735bad3, type: 3}
       propertyPath: m_Size.y

@@ -11,6 +11,7 @@ public class PlayerMovementController : MonoBehaviour {
     private Rigidbody2D rb2D;
     private Vector2 velocity = new Vector2();
     private float currentSpeed = 0;
+    private bool grounded = false;
 
     private void Awake() {
         Debug.Log("Awake Player");
@@ -42,13 +43,15 @@ public class PlayerMovementController : MonoBehaviour {
         velocity = rb2D.velocity;
 
         if(Input.GetKeyDown(KeyCode.W)) {
-            velocity.y = jumpSpeed;
+            if(grounded) {
+                velocity.y = jumpSpeed;
+            }
         }
 
         rb2D.velocity = velocity;
     }
 
     public void OnGroundedChange(bool onGround) {
-        Debug.Log("On Ground = " + onGround.ToString());
+        grounded = onGround;
     }
 }
