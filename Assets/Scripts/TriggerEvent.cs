@@ -14,3 +14,4 @@ public class TriggerEvent : MonoBehaviour {
         OnTriggerChange?.Invoke(false);
     }
 }
+
